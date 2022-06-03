@@ -1,10 +1,17 @@
 #include <iostream>
 
 
-int main(int argv, char *args[])
+int main(int argv, char *args[], char *envp[])
 {
 	for (int i = 0; i < argv; i++)
 		std::cout << args[i] << "\n";
+	std::cout << envp[0] << "\n";
+	std::cout << envp[1] << "\n";
+	std::cout << envp[2] << "\n";
+	std::cout << envp[3] << "\n";
+	std::cout << envp[4] << "\n";
+	std::cout << envp[5] << "\n";
+	std::cout << envp[6] << "\n";
 	int n = 5;
 	int* p;
 	p = &n;
