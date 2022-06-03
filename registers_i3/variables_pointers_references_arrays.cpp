@@ -1,17 +1,17 @@
 #include <iostream>
+#include "Header.h"
 
 
 int main(int argv, char *args[], char *envp[])
 {
 	for (int i = 0; i < argv; i++)
 		std::cout << args[i] << "\n";
-	std::cout << envp[0] << "\n";
-	std::cout << envp[1] << "\n";
-	std::cout << envp[2] << "\n";
-	std::cout << envp[3] << "\n";
-	std::cout << envp[4] << "\n";
-	std::cout << envp[5] << "\n";
-	std::cout << envp[6] << "\n";
+	int i = 0;
+	while (envp[i])
+	{
+		std::cout << envp[i] << "\n";
+		i++;
+	}
 	int n = 5;
 	int* p;
 	p = &n;
@@ -28,8 +28,9 @@ int main(int argv, char *args[], char *envp[])
 	arr[10] = arr[4] + arr[9];
 	std::cout << "\n\nMierda pa to dios!!! \n Se siente conyo!!\n";
 
-
-
+	Flop fiu(2, 1, 0.12);
+	std::cout << fiu.getSerial() << " " << fiu.getTape() << "   " << sizeof(fiu) << "\n";
+  
 
 
 	return 0;
