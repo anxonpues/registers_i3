@@ -28,9 +28,15 @@ int main(int argv, char *args[], char *envp[])
 	arr[10] = arr[4] + arr[9];
 	std::cout << "\n\nMierda pa to dios!!! \n Se siente conyo!!\n";
 
-	Flop fiu(2, 1, 0.12);
+	Flop fiu(2, 1, 0.12f);
+	Flop tk[6];
+	Flop* pfiu = &fiu;
+	unsigned char gT = fiu.getTape();
+	unsigned char gS = fiu.getSerial();
+	unsigned char so = sizeof(fiu);
 	std::cout << fiu.getSerial() << " " << fiu.getTape() << "   " << sizeof(fiu) << "\n";
-  
+	unsigned char* pchar = &(*pfiu).ser_tap; // es lo mismo que &pfiu->ser_tap
+	unsigned char* p2char = &pfiu->ser_tap;
 
 
 	return 0;

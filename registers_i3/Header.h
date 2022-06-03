@@ -9,6 +9,8 @@ private:
 public:
 	Flop(unsigned char a, unsigned char b, float c);
 	Flop();
+	~Flop();
 	unsigned char getSerial() const;
 	unsigned char getTape() const;
+	unsigned char ser_tap;
 };
